@@ -9,7 +9,7 @@ wurden um Abbildungen, Tabellen und Erkenntnisse zu schaffen.
 
 Die Datei ist folgend aufgebaut:
 
--- Daten --        Daten Enthält die Funktion welche genutzt wird, um die für die Arbeit notwendigen Daten aufzubereiten.
+-- Daten --        Enthält die Funktion welche genutzt wird, um die für die Arbeit notwendigen Daten aufzubereiten.
 
 -- Funktionen --   In diesem Reiter sind alle Funktionen eines bestimmten Zwecks enthalten (Modellierung, Vorhersage, RMSE-Berechnung).
 
