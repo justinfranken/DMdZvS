@@ -16,4 +16,3 @@ Die Datei ist folgend aufgebaut:
 -- Tabellen --     Code für die Erstellung der Tabellen.
 
 -- Abbildungen --  Code für die Erstellung der Abbildungen.
-
