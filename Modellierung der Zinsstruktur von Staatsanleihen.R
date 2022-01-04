@@ -842,13 +842,37 @@ lines(x = 3:120, y = s.monoton, lwd = 2)
 legend(x = "bottomright", legend = c("echter Zins", "Zinsstrukturenkurve"), pch = c(8,NA), lty = c(NA, 1), 
        lwd = c(1,2), cex = 1.7)
 par(mfrow = c(1,1))
-
-
-
-
-
-
-
-
-
+### Abbildung 8.1: Faktoren der Modelle von 1985 bis 2007 ####
+f.1 = -faktoranalyse(yields)$faktoren[,1]
+f.1 = ts(f.1, start = 1985, frequency = 12)
+f.2 = -faktoranalyse(yields)$faktoren[,2]
+f.2 = ts(f.2, start = 1985, frequency = 12)
+f.3 = -faktoranalyse(yields)$faktoren[,3]
+f.3 = ts(f.3, start = 1985, frequency = 12)
+b.dl.1 = diebold.li(yields)$beta.dl[,1]
+b.dl.1 = ts(b.dl.1, start = 1985, frequency = 12)
+b.dl.2 = diebold.li(yields)$beta.dl[,2]
+b.dl.2 = ts(b.dl.2, start = 1985, frequency = 12)
+b.dl.3 = diebold.li(yields)$beta.dl[,3]
+b.dl.3 = ts(b.dl.3, start = 1985, frequency = 12)
+b.s.1 = svensson(yields)$beta.s[,1]
+b.s.1 = ts(b.s.1, start = 1985, frequency = 12)
+b.s.2 = svensson(yields)$beta.s[,2]
+b.s.2 = ts(b.s.2, start = 1985, frequency = 12)
+b.s.3 = svensson(yields)$beta.s[,3]
+b.s.3 = ts(b.s.3, start = 1985, frequency = 12)
+b.s.4 = svensson(yields)$beta.s[,4]
+b.s.4 = ts(b.s.4, start = 1985, frequency = 12)
+par(mfrow = c(5,2))
+plot(f.1, type = "l", ylab = "Zins (Prozent)", main = "Faktor 1")
+plot(f.2, type = "l", ylab = "Zins (Prozent)", main = "Faktor 2")
+plot(f.3, type = "l", ylab = "Zins (Prozent)", main = "Faktor 3")
+plot(b.dl.1, type = "l", ylab = "Zins (Prozent)", main = "Diebold-Li Beta 1")
+plot(b.dl.2, type = "l", ylab = "Zins (Prozent)", main = "Diebold-Li Beta 2")
+plot(b.dl.3, type = "l", ylab = "Zins (Prozent)", main = "Diebold-Li Beta 3")
+plot(b.s.1, type = "l", ylab = "Zins (Prozent)", main = "Svensson Beta 1")
+plot(b.s.2, type = "l", ylab = "Zins (Prozent)", main = "Svensson Beta 2")
+plot(b.s.3, type = "l", ylab = "Zins (Prozent)", main = "Svensson Beta 3")
+plot(b.s.4, type = "l", ylab = "Zins (Prozent)", main = "Svensson Beta 4")
+par(mfrow = c(1,1))
 
